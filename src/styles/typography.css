@@ -1,0 +1,108 @@
+:root {
+  --font-grotesk: "Space Grotesk Variable", "Space Grotesk", system-ui, sans-serif;
+  --font-condensed: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-sans: "Inter Variable", Inter, system-ui, sans-serif;
+}
+
+h1, h2, h3 { text-wrap: balance; overflow-wrap: break-word; }
+p { text-wrap: pretty; }
+
+/* Small structural label. Used sparingly, never above every heading. */
+.t-label {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--silver);
+}
+.t-label--mark { display: inline-flex; align-items: center; gap: 0.9rem; }
+.t-label--mark::before { content: ""; flex: none; width: 1.75rem; height: 2px; background: var(--racing); }
+
+/* Dramatic display: Barlow Condensed. Hero, philosophy, closing call to action. */
+.t-display {
+  font-family: var(--font-condensed);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 0.88;
+  letter-spacing: -0.005em;
+  font-size: clamp(3rem, 19vw, 5.25rem);
+}
+@media (min-width: 768px) { .t-display { font-size: clamp(5rem, 10.5vw, 9.5rem); } }
+.t-display-lg {
+  font-family: var(--font-condensed);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 0.88;
+  font-size: clamp(2.75rem, 14vw, 5rem);
+}
+@media (min-width: 768px) { .t-display-lg { font-size: clamp(4.75rem, 10vw, 9.5rem); } }
+
+/* Headings: Space Grotesk */
+.t-h1 {
+  font-family: var(--font-grotesk);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+  font-size: clamp(2.25rem, 6.6vw, 6.25rem);
+}
+.t-h2 {
+  font-family: var(--font-grotesk);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-size: clamp(2rem, 4.6vw, 4.25rem);
+}
+.t-h3 {
+  font-family: var(--font-grotesk);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+}
+.t-statement {
+  font-family: var(--font-grotesk);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  font-size: clamp(1.875rem, 4.4vw, 4.25rem);
+}
+.t-lead {
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 0.5rem + 1.1vw, 1.25rem);
+  line-height: 1.65;
+  color: var(--silver);
+  max-width: 38rem;
+}
+.t-body { font-family: var(--font-sans); font-size: 1rem; line-height: 1.7; color: var(--silver); max-width: 36rem; }
+.t-caption { font-family: var(--font-sans); font-size: 0.75rem; line-height: 1.5; letter-spacing: 0.08em; color: var(--silver); }
+
+.model-name {
+  font-family: var(--font-condensed);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 0.9;
+  font-size: clamp(2.5rem, 4.4vw, 4.5rem);
+}
+
+/* Specification numerals */
+.spec-num {
+  font-family: var(--font-condensed);
+  font-weight: 600;
+  line-height: 0.82;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(5rem, 13vw, 12rem);
+}
+.spec-num--md { font-size: clamp(3.75rem, 8vw, 7rem); }
+.spec-unit {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.8125rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--silver);
+}
